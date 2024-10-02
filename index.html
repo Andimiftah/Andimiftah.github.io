@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentasi Sejarah Jong Java</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            text-align: center;
+            color: #333;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .timeline {
+            margin: 20px 0;
+        }
+        .timeline-item {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            border-left: 3px solid #333;
+        }
+        .timeline-item h3 {
+            color: #007bff;
+        }
+        .timeline-item p {
+            margin: 5px 0;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sejarah Jong Java</h1>
+        <p>Jong Java adalah organisasi pemuda yang dibentuk pada awal abad ke-20 yang bertujuan untuk meningkatkan rasa nasionalisme di kalangan pemuda Jawa. Organisasi ini memainkan peran penting dalam sejarah pergerakan nasional Indonesia.</p>
+        
+        <h2>Timeline Jong Java</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>1915: Pembentukan Jong Java</h3>
+                <p>Jong Java dibentuk pada 7 Maret 1915 di Surakarta oleh Raden Satiman Wirjosandjojo bersama dengan tokoh-tokoh muda lainnya.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>1917: Peran dalam Pergerakan Nasional</h3>
+                <p>Jong Java aktif dalam memperjuangkan kemajuan pendidikan, budaya, dan politik untuk mencapai kemerdekaan Indonesia.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>1928: Kongres Pemuda II</h3>
+                <p>Anggota Jong Java turut serta dalam Kongres Pemuda II, yang menghasilkan Sumpah Pemuda, salah satu tonggak penting dalam sejarah perjuangan Indonesia.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>1930: Perubahan Organisasi</h3>
+                <p>Jong Java kemudian melebur menjadi Indonesia Muda sebagai bagian dari penyatuan gerakan pemuda dari berbagai wilayah Nusantara.</p>
+            </div>
+        </div>
+        
+        <a href="#" class="btn" onclick="nextSlide()">Lanjut ke Slide Berikutnya</a>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+
+        const content = [
+            '<h2>Pembentukan Jong Java</h2><p>Jong Java dibentuk pada 7 Maret 1915 oleh sekelompok pemuda di Surakarta. Tujuannya adalah untuk meningkatkan kesadaran nasional dan memajukan pendidikan bagi masyarakat Jawa.</p>',
+            '<h2>Peran dalam Pendidikan</h2><p>Jong Java berfokus pada bidang pendidikan dengan mendirikan sekolah-sekolah dan mengadakan diskusi untuk meningkatkan kesadaran politik di kalangan pemuda Jawa.</p>',
+            '<h2>Kongres Pemuda II</h2><p>Pada 1928, Jong Java berpartisipasi dalam Kongres Pemuda II yang melahirkan Sumpah Pemuda, menyatukan pemuda-pemuda dari seluruh Indonesia.</p>',
+            '<h2>Peleburan menjadi Indonesia Muda</h2><p>Pada 1930, Jong Java melebur dengan organisasi pemuda lainnya menjadi Indonesia Muda, sebuah gerakan yang memperluas cakupan perjuangan dari regional ke nasional.</p>'
+        ];
+
+        function nextSlide() {
+            slideIndex = (slideIndex + 1) % content.length;
+            document.querySelector('.container').innerHTML = '<h1>Sejarah Jong Java</h1>' + content[slideIndex] + '<a href="#" class="btn" onclick="nextSlide()">Lanjut ke Slide Berikutnya</a>';
+        }
+    </script>
+</body>
+</html>
